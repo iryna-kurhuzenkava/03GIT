@@ -4,19 +4,22 @@ new_file = "C:/03git/test.md"
 name_repo = "03GIT"
 message = "commit13"
 
-github_repo = "https://github.com:iryna-kurhuzenkava/"
-gitlab_repo = "https://gitlab.com:kurhuzenkava/"
-bitbacket_repo = "https://bitbucket.org:iryna-kurhuzenkava/"
+#github_repo = "https://github.com:iryna-kurhuzenkava/"
+#gitlab_repo = "https://gitlab.com:kurhuzenkava/"
+#bitbacket_repo = "https://bitbucket.org:iryna-kurhuzenkava/"
 
-git_repo = [github_repo, gitlab_repo, bitbacket_repo]
+git_repo = {"github_repo": "git@github.com:iryna-kurhuzenkava/03GIT.git",
+            "gitlab_repo": "git@gitlab.com:kurhuzenkava/03GIT.git",
+            "bitbacket_repo": "git@bitbucket.org:iryna-kurhuzenkava/03git.git"}
 
 
 def git_push_automation():
-    for item in git_repo:
+    for repo, url in git_repo.items():
     #try:
-        cmd.run(f'git add --all', check=True, shell=True)
+        cmd.run(f'git add --all') #check=True, shell=True)
         cmd.run(f'git commit -m "{message}"') #check=True, shell=True)
-        cmd.run(f'git remote set-url --push {name_repo} {item}', check=True, shell=True)
+        cmd.run(f'git remote add {repo} {url}')
+        cmd.run(f'git push -u {repo} master') #check=True, shell=True)
         print("Success")
         #return True
     #except:
