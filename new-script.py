@@ -19,7 +19,7 @@ def git_push_automation():
         cmd.run(f'git add --all') #check=True, shell=True)
         cmd.run(f'git commit -m "{message}"') #check=True, shell=True)
         cmd.run(f'git remote add {repo} {url}')
-        cmd.run('git fetch')
+        cmd.run('git pull')
         cmd.run(f'git push -u {repo} master') #check=True, shell=True)
         print("Success")
         #return True
