@@ -1,6 +1,6 @@
 import subprocess as cmd
 
-message = "commit17"
+message = "commit18"
 
 git_repo = {"github_repo": "git@github.com:iryna-kurhuzenkava/03GIT.git",
             "gitlab_repo": "git@gitlab.com:kurhuzenkava/03GIT.git",
@@ -11,7 +11,7 @@ def git_push_automation():
        try:
            cmd.run(f'git add --all') 
            cmd.run(f'git commit -m "{message}"') 
-           cmd.run(f'git remote add {repo} {url}')
+           #cmd.run(f'git remote add {repo} {url}')
            cmd.run(f'git push -f {repo} master') 
            print("Success")
        except:

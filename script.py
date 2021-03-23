@@ -14,8 +14,8 @@ bitbacket_repo = "https://bitbucket.org:iryna-kurhuzenkava/03git.git"
 
 git_repo = [github_repo, gitlab_repo, bitbacket_repo]
 
-def git_push(o):
-    for item in o:
+def git_push():
+    for item in git_repo:
        #try:
            repo = git.Repo(local_repo)
            #repo.git.add(update=True)
@@ -26,6 +26,6 @@ def git_push(o):
            origin.push(all=True)
            #origin.push()
        #except git.exc.GitCommandError as error:
-           #print('Some error occured while pushing the code')    
+           #print(f'Some error occured while pushing the code: {error}')    
 
 git_push(git_repo)
