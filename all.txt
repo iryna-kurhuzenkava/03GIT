@@ -1,0 +1,730 @@
+
+kurhuzenkava.iryna@iryna3066 MINGW64 ~
+$ cd /tmp
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp
+$ mkdir git_ex01
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp
+$ cd git_ex01
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01
+$ ls
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01
+$ git_init
+bash: git_init: command not found
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01
+$ git init
+Initialized empty Git repository in C:/Users/kurhuzenkava.iryna/AppData/Local/Temp/git_ex01/.git/
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (master)
+$ ls -la
+total 68
+drwxr-xr-x 1 kurhuzenkava.iryna 1049089 0 Feb 21 23:14 ./
+drwxr-xr-x 1 kurhuzenkava.iryna 1049089 0 Feb 21 23:13 ../
+drwxr-xr-x 1 kurhuzenkava.iryna 1049089 0 Feb 21 23:14 .git/
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (master)
+$ ls -l .git
+total 7
+-rw-r--r-- 1 kurhuzenkava.iryna 1049089  23 Feb 21 23:14 HEAD
+-rw-r--r-- 1 kurhuzenkava.iryna 1049089 130 Feb 21 23:14 config
+-rw-r--r-- 1 kurhuzenkava.iryna 1049089  73 Feb 21 23:14 description
+drwxr-xr-x 1 kurhuzenkava.iryna 1049089   0 Feb 21 23:14 hooks/
+drwxr-xr-x 1 kurhuzenkava.iryna 1049089   0 Feb 21 23:14 info/
+drwxr-xr-x 1 kurhuzenkava.iryna 1049089   0 Feb 21 23:14 objects/
+drwxr-xr-x 1 kurhuzenkava.iryna 1049089   0 Feb 21 23:14 refs/
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (master)
+$ cat .git/config
+[core]
+        repositoryformatversion = 0
+        filemode = false
+        bare = false
+        logallrefupdates = true
+        symlinks = false
+        ignorecase = true
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (master)
+$ git config user.name "Iryna Kurhuzenkava"
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (master)
+$ git config user.email "ialeschik@gmail.com"
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (master)
+$ cat .git/config
+[core]
+        repositoryformatversion = 0
+        filemode = false
+        bare = false
+        logallrefupdates = true
+        symlinks = false
+        ignorecase = true
+[user]
+        name = Iryna Kurhuzenkava
+        email = ialeschik@gmail.com
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (master)
+$ ls
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (master)
+$  date > file01.txt
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (master)
+$ cat file01.txt
+Sun Feb 21 23:31:06 RTZ 2021
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (master)
+$ git add file01.txt
+warning: LF will be replaced by CRLF in file01.txt.
+The file will have its original line endings in your working directory
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   file01.txt
+
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (master)
+$ git commit -m "Initial Commit"
+[master (root-commit) 56a8f9a] Initial Commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 file01.txt
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (master)
+$ vi file01.txt
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (master)
+$ cat file01.txt
+Sun Feb 21 23:31:06 RTZ 2021
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (master)
+$ vi file01.txt
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (master)
+$ cat file01.txt
+Sun Feb 21 23:31:06 RTZ 2021
+commit 2 to master
+
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   file01.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (master)
+$ git commit -m "Initial Commit"
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   file01.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   file01.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (master)
+$ git commit --amend "Initial Commit"
+error: pathspec 'Initial Commit' did not match any file(s) known to git
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (master)
+$ git commit -a "Initial Commit"
+fatal: paths 'Initial Commit ...' with -a does not make sense
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (master)
+$ git commit -a
+warning: LF will be replaced by CRLF in file01.txt.
+The file will have its original line endings in your working directory
+Aborting commit due to empty commit message.
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   file01.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (master)
+$ git commit -a
+warning: LF will be replaced by CRLF in file01.txt.
+The file will have its original line endings in your working directory
+Aborting commit due to empty commit message.
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (master)
+$ git commit -a -m "commit 2"
+warning: LF will be replaced by CRLF in file01.txt.
+The file will have its original line endings in your working directory
+[master b88cc02] commit 2
+ 1 file changed, 2 insertions(+)
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (master)
+$ git branch -a
+* master
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (master)
+$ git checkout -b "dev"
+Switched to a new branch 'dev'
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (dev)
+$ ls
+file01.txt
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (dev)
+$ cat file01.txt
+Sun Feb 21 23:31:06 RTZ 2021
+commit 2 to master
+
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (dev)
+$ vi file01.txt
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (dev)
+$ git commit -m "commit dev 01"
+On branch dev
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   file01.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (dev)
+$ git status
+On branch dev
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   file01.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (dev)
+$ git commit -a -m "commit dev 01"
+warning: LF will be replaced by CRLF in file01.txt.
+The file will have its original line endings in your working directory
+[dev eb8f39a] commit dev 01
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (dev)
+$ git status
+On branch dev
+nothing to commit, working tree clean
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (dev)
+$ vi file01.txt
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (dev)
+$ git status
+On branch dev
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   file01.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (dev)
+$ git commit -a -m "commit dev 02"
+warning: LF will be replaced by CRLF in file01.txt.
+The file will have its original line endings in your working directory
+[dev 7025d43] commit dev 02
+ 1 file changed, 1 insertion(+)
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (dev)
+$ git status
+On branch dev
+nothing to commit, working tree clean
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (dev)
+$ git checkout -b "features"
+Switched to a new branch 'features'
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (features)
+$ ls
+file01.txt
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (features)
+$ cat file01.txt
+Sun Feb 21 23:31:06 RTZ 2021
+commit 2 to master
+commit 1 to dev
+commit 2 to dev
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (features)
+$ vi file01.txt
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (features)
+$ git commit -a -m "commit features 01"
+warning: LF will be replaced by CRLF in file01.txt.
+The file will have its original line endings in your working directory
+[features ac36258] commit features 01
+ 1 file changed, 1 insertion(+)
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (features)
+$ git status
+On branch features
+nothing to commit, working tree clean
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (features)
+$ cat file01.txt
+Sun Feb 21 23:31:06 RTZ 2021
+commit 2 to master
+commit 1 to dev
+commit 2 to dev
+commit 1 to features
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (features)
+$ git checkout master
+Switched to branch 'master'
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (master)
+$ cat file01.txt
+Sun Feb 21 23:31:06 RTZ 2021
+commit 2 to master
+
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (master)
+$ git checkout -b "hotfix"
+Switched to a new branch 'hotfix'
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (hotfix)
+$ vi file01.txt
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (hotfix)
+$ git dranch -a
+git: 'dranch' is not a git command. See 'git --help'.
+
+The most similar command is
+        branch
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (hotfix)
+$ git branch -a
+  dev
+  features
+* hotfix
+  master
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (hotfix)
+$ git checkout master
+Switched to branch 'master'
+M       file01.txt
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (master)
+$ git log --oneline
+b88cc02 (HEAD -> master, hotfix) commit 2
+56a8f9a Initial Commit
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (master)
+$ git merge hotfix
+Already up to date.
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (master)
+$ git log --oneline
+b88cc02 (HEAD -> master, hotfix) commit 2
+56a8f9a Initial Commit
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (master)
+$ cat file01.txt
+Sun Feb 21 23:31:06 RTZ 2021 HOTFIX
+commit 2 to master
+
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (master)
+$ git checkout dev
+error: Your local changes to the following files would be overwritten by checkout:
+        file01.txt
+Please commit your changes or stash them before you switch branches.
+Aborting
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   file01.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (master)
+$ git commit -a -m "commit hotfix to master"
+[master 6e9d45b] commit hotfix to master
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (master)
+$ git checkout dev
+Switched to branch 'dev'
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (dev)
+$ git rebase master
+Successfully rebased and updated refs/heads/dev.
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (dev)
+$ git status
+On branch dev
+nothing to commit, working tree clean
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (dev)
+$ cat file01.txt
+Sun Feb 21 23:31:06 RTZ 2021 HOTFIX
+commit 2 to master
+commit 1 to dev
+commit 2 to dev
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (dev)
+$ git checkout features
+Switched to branch 'features'
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (features)
+$ git rebase dev
+error: could not apply eb8f39a... commit dev 01
+Resolve all conflicts manually, mark them as resolved with
+"git add/rm <conflicted_files>", then run "git rebase --continue".
+You can instead skip this commit: run "git rebase --skip".
+To abort and get back to the state before "git rebase", run "git rebase --abort".
+Could not apply eb8f39a... commit dev 01
+Auto-merging file01.txt
+CONFLICT (content): Merge conflict in file01.txt
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (features|REBASE 1/3)
+$ git status
+interactive rebase in progress; onto 63722e8
+Last command done (1 command done):
+   pick eb8f39a commit dev 01
+Next commands to do (2 remaining commands):
+   pick 7025d43 commit dev 02
+   pick ac36258 commit features 01
+  (use "git rebase --edit-todo" to view and edit)
+You are currently rebasing branch 'features' on '63722e8'.
+  (fix conflicts and then run "git rebase --continue")
+  (use "git rebase --skip" to skip this patch)
+  (use "git rebase --abort" to check out the original branch)
+
+Unmerged paths:
+  (use "git restore --staged <file>..." to unstage)
+  (use "git add <file>..." to mark resolution)
+        both modified:   file01.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (features|REBASE 1/3)
+$ cat file01.txt
+Sun Feb 21 23:31:06 RTZ 2021 HOTFIX
+commit 2 to master
+commit 1 to dev
+<<<<<<< HEAD
+commit 2 to dev
+=======
+>>>>>>> eb8f39a (commit dev 01)
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (features|REBASE 1/3)
+$ vi file01.txt
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (features|REBASE 1/3)
+$ git checkout dev
+error: you need to resolve your current index first
+file01.txt: needs merge
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (features|REBASE 1/3)
+$ vi file01.txt
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (features|REBASE 1/3)
+$ git checkout dev
+error: you need to resolve your current index first
+file01.txt: needs merge
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (features|REBASE 1/3)
+$ git add --all
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (features|REBASE 1/3)
+$ git merge features
+error: Your local changes to the following files would be overwritten by merge:
+  file01.txt
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (features|REBASE 1/3)
+$ ^C
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (features|REBASE 1/3)
+$ git commit -a -m "conflict"
+[detached HEAD b867d9c] conflict
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (features|REBASE 1/3)
+$ git status
+interactive rebase in progress; onto 63722e8
+Last command done (1 command done):
+   pick eb8f39a commit dev 01
+Next commands to do (2 remaining commands):
+   pick 7025d43 commit dev 02
+   pick ac36258 commit features 01
+  (use "git rebase --edit-todo" to view and edit)
+You are currently editing a commit while rebasing branch 'features' on '63722e8'.
+  (use "git commit --amend" to amend the current commit)
+  (use "git rebase --continue" once you are satisfied with your changes)
+
+nothing to commit, working tree clean
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (features|REBASE 1/3)
+$ git checkout features
+Warning: you are leaving 1 commit behind, not connected to
+any of your branches:
+
+  b867d9c conflict
+
+If you want to keep it by creating a new branch, this may be a good time
+to do so with:
+
+ git branch <new-branch-name> b867d9c
+
+Switched to branch 'features'
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (features|REBASE 1/3)
+$ ^C
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (features|REBASE 1/3)
+$ ^C
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (features|REBASE 1/3)
+$ git checkout dev
+Switched to branch 'dev'
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (features|REBASE 1/3)
+$ ^C
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (features|REBASE 1/3)
+$ git checkout features
+Switched to branch 'features'
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (features|REBASE 1/3)
+$ git rebase dev
+fatal: It seems that there is already a rebase-merge directory, and
+I wonder if you are in the middle of another rebase.  If that is the
+case, please try
+        git rebase (--continue | --abort | --skip)
+If that is not the case, please
+        rm -fr ".git/rebase-merge"
+and run me again.  I am stopping in case you still have something
+valuable there.
+
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (features|REBASE 1/3)
+$ ^C
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (features|REBASE 1/3)
+$ git rebase --continue
+error: could not apply 7025d43... commit dev 02
+Resolve all conflicts manually, mark them as resolved with
+"git add/rm <conflicted_files>", then run "git rebase --continue".
+You can instead skip this commit: run "git rebase --skip".
+To abort and get back to the state before "git rebase", run "git rebase --abort".
+Could not apply 7025d43... commit dev 02
+Auto-merging file01.txt
+CONFLICT (content): Merge conflict in file01.txt
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (features|REBASE 2/3)
+$ git rebase --skip
+dropping ac362588860bd0e9cfbe9eaeb94b3ee9b9710feb commit features 01 -- patch contents already upstream
+Successfully rebased and updated refs/heads/features.
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (features)
+$ git status
+On branch features
+nothing to commit, working tree clean
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (features)
+$ cat file01.txt
+Sun Feb 21 23:31:06 RTZ 2021
+commit 2 to master
+commit 1 to dev
+commit 2 to dev
+commit 1 to features
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (features)
+$ git checkout dev
+Switched to branch 'dev'
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (dev)
+$ cat file01.txt
+Sun Feb 21 23:31:06 RTZ 2021 HOTFIX
+commit 2 to master
+commit 1 to dev
+commit 2 to dev
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (dev)
+$ git status
+On branch dev
+nothing to commit, working tree clean
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (dev)
+$ git checkout features
+Switched to branch 'features'
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (features)
+$ git status
+On branch features
+nothing to commit, working tree clean
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (features)
+$ git rebase dev
+error: could not apply eb8f39a... commit dev 01
+Resolve all conflicts manually, mark them as resolved with
+"git add/rm <conflicted_files>", then run "git rebase --continue".
+You can instead skip this commit: run "git rebase --skip".
+To abort and get back to the state before "git rebase", run "git rebase --abort".
+Could not apply eb8f39a... commit dev 01
+Auto-merging file01.txt
+CONFLICT (content): Merge conflict in file01.txt
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (features|REBASE 1/3)
+$ git rebase --skip
+dropping 7025d4339091e6503b92441f69d184406fc140df commit dev 02 -- patch contents already upstream
+Successfully rebased and updated refs/heads/features.
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (features)
+$ git checkout dev
+Switched to branch 'dev'
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (dev)
+$ git commit -a -m "commit 3"
+On branch dev
+nothing to commit, working tree clean
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (dev)
+$ git checkout features
+Switched to branch 'features'
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (features)
+$ git rebase dev
+Current branch features is up to date.
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (features)
+$ git status
+On branch features
+nothing to commit, working tree clean
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (features)
+$ cat file01.txt
+Sun Feb 21 23:31:06 RTZ 2021 HOTFIX
+commit 2 to master
+commit 1 to dev
+commit 2 to dev
+commit 1 to features
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (features)
+$ git checkout dev
+Switched to branch 'dev'
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (dev)
+$
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (dev)
+$ git checkout features
+Switched to branch 'features'
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (features)
+$ git commit -a -m "commit features final"
+On branch features
+nothing to commit, working tree clean
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (features)
+$ git checkout dev
+Switched to branch 'dev'
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (dev)
+$ git merge features
+Updating 63722e8..7acb889
+Fast-forward
+ file01.txt | 1 +
+ 1 file changed, 1 insertion(+)
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (dev)
+$ cat file01.txt
+Sun Feb 21 23:31:06 RTZ 2021 HOTFIX
+commit 2 to master
+commit 1 to dev
+commit 2 to dev
+commit 1 to features
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (dev)
+$ git commit -a -m "commit dev final"
+On branch dev
+nothing to commit, working tree clean
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (dev)
+$ git checkout master
+Switched to branch 'master'
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (master)
+$ git merge dev
+Updating 6e9d45b..7acb889
+Fast-forward
+ file01.txt | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (master)
+$ git commit -a -m "commit master final"
+On branch master
+nothing to commit, working tree clean
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (master)
+$ cat file01.txt
+Sun Feb 21 23:31:06 RTZ 2021 HOTFIX
+commit 2 to master
+commit 1 to dev
+commit 2 to dev
+commit 1 to features
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (master)
+$ git log --oneline
+7acb889 (HEAD -> master, features, dev) commit features 01
+63722e8 commit dev 02
+22825f9 commit dev 01
+6e9d45b commit hotfix to master
+b88cc02 (hotfix) commit 2
+56a8f9a Initial Commit
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (master)
+$ histiry
+bash: histiry: command not found
+
+kurhuzenkava.iryna@iryna3066 MINGW64 /tmp/git_ex01 (master)
+$ history
