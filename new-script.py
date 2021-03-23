@@ -1,8 +1,8 @@
 import subprocess as cmd
 
-new_file = "C:/03git/test.md"
-name_repo = "03GIT"
-message = "commit13"
+#new_file = "C:/03git/test.md"
+#name_repo = "03GIT"
+message = "commit14"
 
 #github_repo = "https://github.com:iryna-kurhuzenkava/"
 #gitlab_repo = "https://gitlab.com:kurhuzenkava/"
